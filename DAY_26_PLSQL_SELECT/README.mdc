@@ -1,0 +1,24 @@
+
+In PL/SQL, the SELECT statement is used to retrieve data from database tables.
+
+However, there is an important difference between using SELECT in SQL and PL/SQL.
+- In SQL, you can directly execute a SELECT statement to retrieve records.
+- In PL/SQL, when retrieving a single row into variables, you generally use SELECT INTO.
+
+* Syntax : 
+  SELECT column_name
+  INTO variable_name
+  FROM table_name
+  WHERE condition;
+
+ - SELECT INTO is used to retrieve a single row in a PL/SQL block.
+
+- The number of variables after INTO must match the number of selected expressions.
+
+- Their data types must be compatible.
+
+- If no record is found, Oracle raises NO_DATA_FOUND.
+
+- If multiple records are returned, Oracle raises TOO_MANY_ROWS.
+
+- For retrieving multiple rows, we generally use cursors.
